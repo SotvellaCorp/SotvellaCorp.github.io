@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
+
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -54,6 +55,8 @@
       text-decoration: none;
       font-weight: bold;
       margin-top: 10px;
+      border: none;
+      cursor: pointer;
     }
 
     .btn:hover {
@@ -66,10 +69,56 @@
       font-size: 14px;
       color: #94a3b8;
     }
+
+    /* BOTÓN CONTRATO */
+
+    .contract-button {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 1000;
+    }
+
+    /* MODAL */
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 2000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.7);
+    }
+
+    .modal-content {
+      background: white;
+      width: 80%;
+      height: 80%;
+      margin: 5% auto;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .modal iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
   </style>
 </head>
 
 <body>
+
+<!-- BOTÓN SUPERIOR IZQUIERDO -->
+
+<div class="contract-button">
+  <button class="btn" onclick="openModal()">
+    Ver contrato
+  </button>
+</div>
 
 <header>
   <h1>Auditoría de Seguridad Web</h1>
@@ -116,6 +165,7 @@
   <div class="card">
     <h2>Contacto</h2>
     <p>Email: tuemail@gmail.com</p>
+
     <a class="btn" href="https://wa.me/573000000000" target="_blank">
       Contactar por WhatsApp
     </a>
@@ -127,5 +177,37 @@
   <p>© 2026 Seguridad Web Básica</p>
 </footer>
 
+<!-- MODAL CONTRATO -->
+
+<div id="contractModal" class="modal">
+
+  <div class="modal-content">
+
+    <iframe src="contrato.pdf"></iframe>
+
+  </div>
+
+</div>
+
+<script>
+
+  const modal = document.getElementById("contractModal");
+
+  function openModal() {
+    modal.style.display = "block";
+  }
+
+  window.onclick = function(event) {
+
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+
+  }
+
+</script>
+
 </body>
 </html>
+     
+ 

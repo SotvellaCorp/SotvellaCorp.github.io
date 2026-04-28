@@ -1,147 +1,131 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Auditoría de Seguridad Web</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Seguridad Web</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #0f172a;
+      color: #e2e8f0;
+    }
 
-<style>
+    header {
+      background: #020617;
+      padding: 20px;
+      text-align: center;
+    }
 
-body{
-    margin:0;
-    font-family:Arial, sans-serif;
-    background:#0f172a;
-    color:white;
-}
+    h1 {
+      margin: 0;
+      font-size: 32px;
+    }
 
-/* BOTÓN SUPERIOR IZQUIERDO */
+    .container {
+      padding: 30px;
+      max-width: 900px;
+      margin: auto;
+    }
 
-.top-left{
-    position:fixed;
-    top:20px;
-    left:20px;
-    z-index:1000;
-}
+    .card {
+      background: #1e293b;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+    }
 
-.btn{
-    background:#38bdf8;
-    border:none;
-    padding:12px 18px;
-    border-radius:8px;
-    cursor:pointer;
-    font-weight:bold;
-}
+    h2 {
+      color: #38bdf8;
+    }
 
-/* CONTENIDO CENTRAL */
+    ul {
+      padding-left: 20px;
+    }
 
-.main{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
-    text-align:center;
-    padding:20px;
-}
+    .btn {
+      display: inline-block;
+      background: #22c55e;
+      color: #000;
+      padding: 12px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 10px;
+    }
 
-.content{
-    max-width:700px;
-}
+    .btn:hover {
+      background: #16a34a;
+    }
 
-/* VENTANA EMERGENTE */
-
-.modal{
-    display:none;
-    position:fixed;
-    z-index:2000;
-    left:0;
-    top:0;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,0.7);
-}
-
-/* CONTENEDOR PDF */
-
-.modal-content{
-    position:relative;
-    background:white;
-    width:80%;
-    height:80%;
-    margin:5% auto;
-    border-radius:10px;
-    overflow:hidden;
-}
-
-.modal iframe{
-    width:100%;
-    height:100%;
-    border:none;
-}
-
-</style>
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #94a3b8;
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- BOTÓN -->
+<header>
+  <h1>Auditoría de Seguridad Web</h1>
+  <p>Protege tu sitio antes de que sea atacado</p>
+</header>
 
-<div class="top-left">
-    <button class="btn" onclick="openModal()">
-        Ver contrato
-    </button>
-</div>
+<div class="container">
 
-<!-- CONTENIDO CENTRAL -->
+  <div class="card">
+    <h2>¿Qué hago?</h2>
+    <p>Analizo tu página web para detectar vulnerabilidades básicas que podrían comprometer tu negocio o tus usuarios.</p>
+  </div>
 
-<div class="main">
-    <div class="content">
+  <div class="card">
+    <h2>Servicios</h2>
+    <ul>
+      <li>Escaneo de vulnerabilidades automatizado</li>
+      <li>Pruebas manuales básicas</li>
+      <li>Detección de errores comunes (login, accesos, configuración)</li>
+      <li>Reporte claro con soluciones</li>
+    </ul>
+  </div>
 
-        <h1>Auditoría de Seguridad Web</h1>
+  <div class="card">
+    <h2>Herramientas utilizadas</h2>
+    <p>Uso herramientas profesionales como Burp Suite, OWASP ZAP y análisis manual.</p>
+  </div>
 
-        <p>
-            Identificación de vulnerabilidades y revisión básica         
-            
-        </p>
+  <div class="card">
+    <h2>Proceso</h2>
+    <ol>
+      <li>Me contactas</li>
+      <li>Definimos alcance (qué se revisa)</li>
+      <li>Realizo el análisis</li>
+      <li>Te entrego un informe con hallazgos</li>
+    </ol>
+  </div>
 
-    </div>
-</div>
-
-<!-- MODAL -->
-
-<div id="contractModal" class="modal">
-
-    <div class="modal-content">
-
-        <iframe src="contrato.pdf"></iframe>
-
-    </div>
- <div class="card">
+  <div class="card">
     <h2>Importante</h2>
     <p>Solo realizo pruebas con autorización del propietario del sitio web.</p>
-  </div>   
+  </div>
+
+  <div class="card">
+    <h2>Contacto</h2>
+    <p>Email: tuemail@gmail.com</p>
+    <a class="btn" href="https://wa.me/573000000000" target="_blank">
+      Contactar por WhatsApp
+    </a>
+  </div>
 
 </div>
 
-<script>
-
-const modal = document.getElementById("contractModal");
-
-function openModal(){
-    modal.style.display = "block";
-}
-
-/* CERRAR SI HACE CLICK FUERA */
-
-window.onclick = function(event){
-
-    if(event.target == modal){
-        modal.style.display = "none";
-    }
-
-}
-
-</script>
+<footer>
+  <p>© 2026 Seguridad Web Básica</p>
+</footer>
 
 </body>
 </html>

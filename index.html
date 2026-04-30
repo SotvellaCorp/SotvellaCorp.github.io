@@ -329,16 +329,54 @@ function googleTranslateElementInit() {
 
 /* CAMBIAR IDIOMA */
 
+<script>
+
+function googleTranslateElementInit() {
+
+  new google.translate.TranslateElement(
+    {
+      pageLanguage: 'es',
+      autoDisplay: false
+    },
+    'google_translate_element'
+  );
+
+}
+
+/* CAMBIO IDIOMA */
+
+<script>
+
+function googleTranslateElementInit() {
+
+  new google.translate.TranslateElement(
+    {
+      pageLanguage: 'es',
+      autoDisplay: false
+    },
+    'google_translate_element'
+  );
+
+}
+
+/* CAMBIO IDIOMA */
+
 function changeLanguage(lang) {
 
-  const select = document.querySelector(".goog-te-combo");
+  const interval = setInterval(() => {
 
-  if(select){
+    const select = document.querySelector(".goog-te-combo");
 
-    select.value = lang;
-    select.dispatchEvent(new Event("change"));
+    if(select){
 
-  }
+      select.value = lang;
+      select.dispatchEvent(new Event("change"));
+
+      clearInterval(interval);
+
+    }
+
+  }, 500);
 
 }
 

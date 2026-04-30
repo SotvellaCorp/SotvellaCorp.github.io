@@ -125,7 +125,60 @@
       }
 
     }
+/* CONTENEDOR TRADUCTOR */
 
+.language-box{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    margin-top:15px;
+    margin-bottom:10px;
+    flex-wrap:wrap;
+}
+
+/* TEXTO */
+
+.language-label{
+    font-weight:bold;
+    color:#38bdf8;
+}
+
+/* OCULTAR TEXTO FEO GOOGLE */
+
+.goog-logo-link,
+.goog-te-gadget span{
+    display:none !important;
+}
+
+/* ESTILO GENERAL */
+
+.goog-te-gadget{
+    color:transparent !important;
+    font-size:0px;
+}
+
+/* SELECTOR */
+
+.goog-te-combo{
+    background:#1e293b !important;
+    color:#e2e8f0 !important;
+    border:1px solid #334155 !important;
+    padding:8px 12px !important;
+    border-radius:8px !important;
+    cursor:pointer;
+    font-size:14px !important;
+}
+
+/* BANNER GOOGLE */
+
+.goog-te-banner-frame.skiptranslate{
+    display:none !important;
+}
+
+body{
+    top:0px !important;
+}
   </style>
 </head>
 
@@ -158,7 +211,15 @@
   </header>
 
   <!-- CONTENIDO -->
+ <div class="language-box">
+
+  <span class="language-label">
+    🌐 Language / Idioma
+  </span>
+
   <div id="google_translate_element"></div>
+
+</div>
 
   <div class="container">
 

@@ -95,7 +95,10 @@
     }
 
     /* RESPONSIVE */
-
+   #google_translate_element{
+    text-align:center;
+    margin-top:15px;
+}
     @media (max-width: 768px) {
 
       h1 {
@@ -125,6 +128,8 @@
 
   </style>
 </head>
+  
+<div id="google_translate_element"></div>
 
 <body>
 
@@ -154,6 +159,7 @@
   </header>
 
   <!-- CONTENIDO -->
+  <div id="google_translate_element"></div>
 
   <div class="container">
 
@@ -247,7 +253,22 @@
     <p>© 2026 Seguridad Web Básica</p>
 
   </footer>
+<script>
 
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    {
+      pageLanguage: 'es',
+      includedLanguages: 'en,es',
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    },
+    'google_translate_element'
+  );
+}
+
+</script>
+
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 
 </html>

@@ -1,5 +1,7 @@
+<!-- ========================= -->
+<!-- ARCHIVO 1: index.html -->
+<!-- ========================= -->
 
- 
 <!DOCTYPE html>
 <html lang="es">
 
@@ -19,13 +21,13 @@
 
     header {
       background: #020617;
-      padding: 20px;
+      padding: 25px;
       text-align: center;
     }
 
     h1 {
       margin: 0;
-      font-size: 32px;
+      font-size: 34px;
     }
 
     .container {
@@ -36,17 +38,18 @@
 
     .card {
       background: #1e293b;
-      padding: 20px;
+      padding: 22px;
       margin-bottom: 20px;
-      border-radius: 10px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
     }
 
     h2 {
       color: #38bdf8;
+      margin-top: 0;
     }
 
-    ul,
-    ol {
+    ul, ol {
       padding-left: 20px;
     }
 
@@ -59,19 +62,11 @@
       text-decoration: none;
       font-weight: bold;
       margin-top: 10px;
-      border: none;
-      cursor: pointer;
+      transition: 0.3s;
     }
 
     .btn:hover {
       background: #16a34a;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
-      color: #94a3b8;
     }
 
     /* BOTÓN CONTRATO */
@@ -83,55 +78,20 @@
       z-index: 1000;
     }
 
-    /* MODAL */
-
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 2000;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.75);
-      overflow: auto;
+    .contract-btn {
+      background: #38bdf8;
+      color: #000;
     }
 
-    /* VENTANA CONTRATO */
-
-    .contract-window {
-      background: #111827;
-      width: 80%;
-      max-width: 900px;
-      margin: 40px auto;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    .contract-btn:hover {
+      background: #0ea5e9;
     }
 
-    /* CABECERA */
-
-    .contract-header {
-      background: #0f172a;
+    footer {
+      text-align: center;
       padding: 20px;
-      border-bottom: 1px solid #334155;
-    }
-
-    .contract-header h2 {
-      margin: 0;
-      color: #38bdf8;
-    }
-
-    /* CUERPO CONTRATO */
-
-    .contract-body {
-      padding: 25px;
-      line-height: 1.8;
-    }
-
-    .contract-body h3 {
-      color: #38bdf8;
-      margin-top: 25px;
+      font-size: 14px;
+      color: #94a3b8;
     }
 
     /* RESPONSIVE */
@@ -139,7 +99,7 @@
     @media (max-width: 768px) {
 
       h1 {
-        font-size: 24px;
+        font-size: 26px;
       }
 
       .container {
@@ -147,7 +107,7 @@
       }
 
       .card {
-        padding: 15px;
+        padding: 16px;
       }
 
       .btn {
@@ -156,13 +116,9 @@
         box-sizing: border-box;
       }
 
-      .contract-window {
-        width: 95%;
-        margin: 20px auto;
-      }
-
-      .contract-body {
-        padding: 18px;
+      .contract-button {
+        position: static;
+        padding: 15px;
       }
 
     }
@@ -175,16 +131,26 @@
   <!-- BOTÓN CONTRATO -->
 
   <div class="contract-button">
-    <button class="btn" onclick="openModal()">
+
+    <a href="contrato.html"
+       class="btn contract-btn">
+
       Ver contrato
-    </button>
+
+    </a>
+
   </div>
 
   <!-- HEADER -->
 
   <header>
+
     <h1>Auditoría de Seguridad Web</h1>
-    <p>Protege tu sitio antes de que sea atacado</p>
+
+    <p>
+      Protege tu sitio antes de que sea atacado
+    </p>
+
   </header>
 
   <!-- CONTENIDO -->
@@ -192,14 +158,18 @@
   <div class="container">
 
     <div class="card">
+
       <h2>¿Qué hago?</h2>
+
       <p>
         Analizo tu página web para detectar vulnerabilidades básicas
         que podrían comprometer tu negocio o tus usuarios.
       </p>
+
     </div>
 
     <div class="card">
+
       <h2>Servicios</h2>
 
       <ul>
@@ -208,18 +178,22 @@
         <li>Detección de errores comunes</li>
         <li>Reporte técnico con recomendaciones</li>
       </ul>
+
     </div>
 
     <div class="card">
+
       <h2>Herramientas utilizadas</h2>
 
       <p>
         Uso herramientas profesionales como Burp Suite,
         OWASP ZAP y análisis manual.
       </p>
+
     </div>
 
     <div class="card">
+
       <h2>Proceso</h2>
 
       <ol>
@@ -228,29 +202,34 @@
         <li>Realizo el análisis</li>
         <li>Entrego informe técnico</li>
       </ol>
+
     </div>
 
     <div class="card">
+
       <h2>Importante</h2>
 
       <p>
         Solo realizo pruebas con autorización del propietario
         del sitio web.
       </p>
+
     </div>
 
     <div class="card">
+
       <h2>Contacto</h2>
 
       <p>Email: tuemail@gmail.com</p>
 
       <a class="btn"
-        href="https://wa.me/573000000000"
-        target="_blank">
+         href="https://wa.me/573000000000"
+         target="_blank">
 
-        Contactar por WhatsApp
+         Contactar por WhatsApp
 
       </a>
+
     </div>
 
   </div>
@@ -258,111 +237,21 @@
   <!-- FOOTER -->
 
   <footer>
+
     <p>© 2026 Seguridad Web Básica</p>
+
   </footer>
-
-  <!-- MODAL CONTRATO -->
-
-  <div id="contractModal" class="modal">
-
-    <div class="contract-window">
-
-      <div class="contract-header">
-
-        <h2>Contrato de Servicio</h2>
-
-      </div>
-
-      <div class="contract-body">
-
-        <h3>ACUERDO DE AUDITORÍA DE SEGURIDAD WEB</h3>
-
-        <p><strong>Fecha:</strong> [día/mes/año]</p>
-
-        <p>
-          Este acuerdo establece las condiciones del servicio
-          de auditoría de seguridad web entre el proveedor y el cliente.
-        </p>
-
-        <h3>1. Objeto del servicio</h3>
-
-        <p>
-          El proveedor realizará pruebas básicas de seguridad
-          orientadas a identificar posibles vulnerabilidades
-          en el sitio web autorizado.
-        </p>
-
-        <h3>2. Alcance</h3>
-
-        <ul>
-          <li>Escaneo automatizado</li>
-          <li>Pruebas manuales básicas</li>
-          <li>Revisión de configuraciones comunes</li>
-          <li>Entrega de informe técnico</li>
-        </ul>
-
-        <h3>3. Autorización</h3>
-
-        <p>
-          El cliente declara ser propietario del sitio o contar
-          con autorización legal para solicitar esta auditoría.
-        </p>
-
-        <h3>4. Confidencialidad</h3>
-
-        <p>
-          Toda la información obtenida durante la auditoría
-          será tratada de manera confidencial.
-        </p>
-
-        <h3>5. Limitación</h3>
-
-        <p>
-          El proveedor no garantiza la detección de todas las
-          vulnerabilidades existentes ni será responsable por
-          daños derivados del uso indebido del sistema.
-        </p>
-
-        <h3>6. Uso ético</h3>
-
-        <p>
-          Las pruebas se realizarán únicamente con fines
-          preventivos y dentro del alcance autorizado.
-        </p>
-
-        <h3>7. Aceptación</h3>
-
-        <p>
-          Ambas partes aceptan los términos descritos
-          en este acuerdo.
-        </p>
-
-      </div>
-
-    </div>
-
-  </div>
-
-  <!-- JAVASCRIPT -->
-
-  <script>
-
-    const modal = document.getElementById("contractModal");
-
-    function openModal() {
-      modal.style.display = "block";
-    }
-
-    window.onclick = function (event) {
-
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-
-    }
-
-  </script>
 
 </body>
 
 </html>
+ 
+
+
+
+
+    
+ 
+      
+      
+

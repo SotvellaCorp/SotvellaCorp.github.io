@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
   <meta charset="UTF-8">
-  <title>Auditoria en ingles</title>
+  <title>Auditoría de Seguridad Web</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
@@ -85,6 +84,54 @@
       background: #0ea5e9;
     }
 
+    /* IDIOMA */
+
+    .language-switcher{
+      display:flex;
+      justify-content:center;
+      gap:10px;
+      margin-top:15px;
+      margin-bottom:15px;
+    }
+
+    .language-switcher a{
+      background:#1e293b;
+      color:#38bdf8;
+      border:1px solid #334155;
+      padding:10px 18px;
+      border-radius:8px;
+      text-decoration:none;
+      font-weight:bold;
+    }
+
+    .language-switcher a:hover{
+      background:#334155;
+    }
+
+    /* NAVEGACIÓN */
+
+    .navigation{
+      display:flex;
+      justify-content:space-between;
+      margin-top:30px;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+
+    .nav-btn{
+      background:#38bdf8;
+      color:#000;
+      padding:12px 20px;
+      border-radius:8px;
+      text-decoration:none;
+      font-weight:bold;
+      transition:0.3s;
+    }
+
+    .nav-btn:hover{
+      background:#0ea5e9;
+    }
+
     footer {
       text-align: center;
       padding: 20px;
@@ -108,10 +155,11 @@
         padding: 16px;
       }
 
-      .btn {
-        width: 100%;
-        text-align: center;
-        box-sizing: border-box;
+      .btn,
+      .nav-btn {
+        width:100%;
+        text-align:center;
+        box-sizing:border-box;
       }
 
       .contract-button {
@@ -119,112 +167,42 @@
         padding: 15px;
       }
 
+      .navigation{
+        flex-direction:column;
+      }
+
     }
-.language-switcher{
-    display:flex;
-    justify-content:center;
-    gap:10px;
-    margin-top:15px;
-    margin-bottom:15px;
-}
 
-.language-switcher a{
-    background:#1e293b;
-    color:#38bdf8;
-    border:1px solid #334155;
-    padding:10px 18px;
-    border-radius:8px;
-    text-decoration:none;
-    font-weight:bold;
-}
-
-.language-switcher a:hover{
-    background:#334155;
-}
-    /* SLIDER */
-
-.slider{
-    display:flex;
-    align-items:center;
-    gap:15px;
-}
-
-.slide-container{
-    flex:1;
-    position:relative;
-    min-height:120px;
-}
-
-.slide{
-    display:none;
-    background:#111827;
-    padding:20px;
-    border-radius:10px;
-    animation:fade 0.4s;
-}
-
-.slide.active{
-    display:block;
-}
-
-.slide-btn{
-    background:#38bdf8;
-    border:none;
-    color:#000;
-    font-size:20px;
-    padding:10px 15px;
-    border-radius:8px;
-    cursor:pointer;
-}
-
-.slide-btn:hover{
-    background:#0ea5e9;
-}
-
-@keyframes fade{
-    from{
-        opacity:0;
-    }
-    to{
-        opacity:1;
-    }
-}
   </style>
 </head>
 
 <body>
 
   <!-- BOTÓN CONTRATO -->
-  <div class="language-switcher">
 
-  <a href="index.html">Español</a>
-
-  <a href="indexingles.html">English</a>
-
-</div>
-
-  <div class="contract-button">
-
-    <a href="contrato.html"
-       class="btn contract-btn">
-
-      Ver contrato
-
-    </a>
-
-  </div>
+  
 
   <!-- HEADER -->
 
   <header>
 
-    <h1>Auditory Security Web</h1>
+    <h1>Auditoría de Seguridad Web</h1>
 
     <p>
       Protege tu sitio antes de que sea atacado
     </p>
 
   </header>
+
+  <!-- BOTONES IDIOMA -->
+
+  <div class="language-switcher">
+
+    <a href="index.html">Español</a>
+
+    <a href="indexingles.html">English</a>
+
+  </div>
 
   <!-- CONTENIDO -->
 
@@ -277,89 +255,10 @@
       </ol>
 
     </div>
-<!-- en esta seccion modifico para el slider referencia proceso -->.
-    <div class="card">
-
-  <h2>Reseñas</h2>
-
-  <div class="slider">
-
-    <button class="slide-btn" onclick="prevSlide()">
-      ◀
-    </button>
-
-    <div class="slide-container">
-
-      <div class="slide active">
-
-        <p>
-          "La auditoría fue clara y útil.
-          Recibimos recomendaciones fáciles de implementar."
-        </p>
-
-        <strong>- Cliente Demo</strong>
-
-      </div>
-
-      <div class="slide">
-
-        <p>
-          "Excelente comunicación y reporte profesional."
-        </p>
-
-        <strong>- Empresa Demo</strong>
-
-      </div>
-
-      <div class="slide">
-
-        <p>
-          "Se identificaron configuraciones inseguras
-          que desconocíamos."
-        </p>
-
-        <strong>- Cliente Demo</strong>
-
-      </div>
-
-    </div>
-
-    <button class="slide-btn" onclick="nextSlide()">
-      ▶
-    </button>
-
-  </div>
-
-</div>
-    <div class="card">
-
-      <h2>Importante</h2>
-
-      <p>
-        Solo realizo pruebas con autorización del propietario
-        del sitio web.
-      </p>
-
-    </div>
 
     <div class="card">
 
-      <h2>Ejemplo de reporte</h2>
-
-      <p>
-        Puedes visualizar un ejemplo del tipo de reporte
-        entregado después de una auditoría.
-      </p>
-
-      <a class="btn"
-         href="reportedemo.html">
-
-         Ver ejemplo de reporte
-
-      </a>
-
-    </div>
-
+     
     <div class="card">
 
       <h2>Contacto</h2>
@@ -376,6 +275,26 @@
 
     </div>
 
+    <!-- NAVEGACIÓN -->
+
+    <div class="navigation">
+
+      <a class="nav-btn"
+         href="contratoingles.html">
+
+         Contrato
+
+      </a>
+
+      <a class="nav-btn"
+         href="reportedemoingles.html">
+
+         Reporte 
+
+      </a>
+
+    </div>
+
   </div>
 
   <!-- FOOTER -->
@@ -385,49 +304,6 @@
     <p>© 2026 Seguridad Web Básica</p>
 
   </footer>
-  <script>
-
-let currentSlide = 0;
-
-const slides = document.querySelectorAll(".slide");
-
-function showSlide(index){
-
-    slides.forEach(slide => {
-        slide.classList.remove("active");
-    });
-
-    slides[index].classList.add("active");
-
-}
-
-function nextSlide(){
-
-    currentSlide++;
-
-    if(currentSlide >= slides.length){
-        currentSlide = 0;
-    }
-
-    showSlide(currentSlide);
-
-}
-
-function prevSlide(){
-
-    currentSlide--;
-
-    if(currentSlide < 0){
-        currentSlide = slides.length - 1;
-    }
-
-    showSlide(currentSlide);
-
-}
-
-showSlide(currentSlide);
-
-</script>
 
 </body>
 

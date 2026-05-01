@@ -1,1 +1,290 @@
 
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Auditoria en ingles</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #0f172a;
+      color: #e2e8f0;
+    }
+
+    header {
+      background: #020617;
+      padding: 25px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 34px;
+    }
+
+    .container {
+      padding: 30px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .card {
+      background: #1e293b;
+      padding: 22px;
+      margin-bottom: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    h2 {
+      color: #38bdf8;
+      margin-top: 0;
+    }
+
+    ul,
+    ol {
+      padding-left: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #22c55e;
+      color: #000;
+      padding: 12px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 10px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #16a34a;
+    }
+
+    /* BOTÓN CONTRATO */
+
+    .contract-button {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 1000;
+    }
+
+    .contract-btn {
+      background: #38bdf8;
+      color: #000;
+    }
+
+    .contract-btn:hover {
+      background: #0ea5e9;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #94a3b8;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 768px) {
+
+      h1 {
+        font-size: 26px;
+      }
+
+      .container {
+        padding: 15px;
+      }
+
+      .card {
+        padding: 16px;
+      }
+
+      .btn {
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+      }
+
+      .contract-button {
+        position: static;
+        padding: 15px;
+      }
+
+    }
+.language-switcher{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    margin-top:15px;
+    margin-bottom:15px;
+}
+
+.language-switcher a{
+    background:#1e293b;
+    color:#38bdf8;
+    border:1px solid #334155;
+    padding:10px 18px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.language-switcher a:hover{
+    background:#334155;
+}
+  </style>
+</head>
+
+<body>
+
+  <!-- BOTÓN CONTRATO -->
+  <div class="language-switcher">
+
+  <a href="index.html">Español</a>
+
+  <a href="index-en.html">English</a>
+
+</div>
+
+  <div class="contract-button">
+
+    <a href="contrato.html"
+       class="btn contract-btn">
+
+      Ver contrato
+
+    </a>
+
+  </div>
+
+  <!-- HEADER -->
+
+  <header>
+
+    <h1>Auditoría de Seguridad Web</h1>
+
+    <p>
+      Protege tu sitio antes de que sea atacado
+    </p>
+
+  </header>
+
+  <!-- CONTENIDO -->
+
+  <div class="container">
+
+    <div class="card">
+
+      <h2>¿Qué hago?</h2>
+
+      <p>
+        Analizo tu página web para detectar vulnerabilidades básicas
+        que podrían comprometer tu negocio o tus usuarios.
+      </p>
+
+    </div>
+
+    <div class="card">
+
+      <h2>Servicios</h2>
+
+      <ul>
+        <li>Escaneo de vulnerabilidades automatizado</li>
+        <li>Pruebas manuales básicas</li>
+        <li>Detección de errores comunes</li>
+        <li>Reporte técnico con recomendaciones</li>
+      </ul>
+
+    </div>
+
+    <div class="card">
+
+      <h2>Herramientas utilizadas</h2>
+
+      <p>
+        Uso herramientas profesionales como Burp Suite,
+        OWASP ZAP y análisis manual.
+      </p>
+
+    </div>
+
+    <div class="card">
+
+      <h2>Proceso</h2>
+
+      <ol>
+        <li>Me contactas</li>
+        <li>Definimos alcance</li>
+        <li>Realizo el análisis</li>
+        <li>Entrego informe técnico</li>
+      </ol>
+
+    </div>
+
+    <div class="card">
+
+      <h2>Importante</h2>
+
+      <p>
+        Solo realizo pruebas con autorización del propietario
+        del sitio web.
+      </p>
+
+    </div>
+
+    <div class="card">
+
+      <h2>Ejemplo de reporte</h2>
+
+      <p>
+        Puedes visualizar un ejemplo del tipo de reporte
+        entregado después de una auditoría.
+      </p>
+
+      <a class="btn"
+         href="reportedemo.html">
+
+         Ver ejemplo de reporte
+
+      </a>
+
+    </div>
+
+    <div class="card">
+
+      <h2>Contacto</h2>
+
+      <p>Email: tuemail@gmail.com</p>
+
+      <a class="btn"
+         href="https://wa.me/573332504069"
+         target="_blank">
+
+         Contactar por WhatsApp
+
+      </a>
+
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>© 2026 Seguridad Web Básica</p>
+
+  </footer>
+
+</body>
+
+</html>

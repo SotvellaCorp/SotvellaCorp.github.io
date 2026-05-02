@@ -1,3 +1,7 @@
+<!-- ======================================= -->
+<!-- ARCHIVO: indexingles.html -->
+<!-- ======================================= -->
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -15,6 +19,8 @@
       color: #e2e8f0;
     }
 
+    /* HEADER */
+
     header {
       background: #020617;
       padding: 25px;
@@ -25,6 +31,125 @@
       margin: 0;
       font-size: 34px;
     }
+
+    /* BARRA SUPERIOR */
+
+    .top-bar{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:15px 20px;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+
+    /* ICONO MENÚ */
+
+    .menu-icon{
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      width:48px;
+      height:48px;
+
+      background:#1e293b;
+      color:#38bdf8;
+
+      border:1px solid #334155;
+
+      border-radius:8px;
+
+      font-size:28px;
+      cursor:pointer;
+
+      transition:0.3s;
+    }
+
+    .menu-icon:hover{
+      background:#334155;
+    }
+
+    /* BOTONES IDIOMA */
+
+    .language-switcher{
+      display:flex;
+      gap:10px;
+    }
+
+    .language-switcher a{
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      height:48px;
+
+      padding:0 18px;
+
+      background:#1e293b;
+      color:#38bdf8;
+
+      border:1px solid #334155;
+
+      border-radius:8px;
+
+      text-decoration:none;
+      font-weight:bold;
+
+      transition:0.3s;
+    }
+
+    .language-switcher a:hover{
+      background:#334155;
+    }
+
+    /* PANEL LATERAL */
+
+    .side-menu{
+      position:fixed;
+      top:0;
+      left:-250px;
+
+      width:220px;
+      height:100%;
+
+      background:#020617;
+
+      padding-top:80px;
+
+      transition:0.3s;
+
+      z-index:1500;
+
+      box-shadow:0 0 20px rgba(0,0,0,0.5);
+    }
+
+    .side-menu a{
+      display:block;
+
+      color:#e2e8f0;
+
+      padding:15px 25px;
+
+      text-decoration:none;
+
+      font-size:18px;
+
+      transition:0.3s;
+    }
+
+    .side-menu a:hover{
+      background:#1e293b;
+      color:#38bdf8;
+    }
+
+    .side-menu.active{
+      left:0;
+    }
+
+    /* CONTENIDO */
 
     .container {
       padding: 30px;
@@ -66,71 +191,7 @@
       background: #16a34a;
     }
 
-    /* BOTÓN CONTRATO */
-
-    .contract-button {
-      position: fixed;
-      top: 20px;
-      left: 20px;
-      z-index: 1000;
-    }
-
-    .contract-btn {
-      background: #38bdf8;
-      color: #000;
-    }
-
-    .contract-btn:hover {
-      background: #0ea5e9;
-    }
-
-    /* IDIOMA */
-
-    .language-switcher{
-      display:flex;
-      justify-content:center;
-      gap:10px;
-      margin-top:15px;
-      margin-bottom:15px;
-    }
-
-    .language-switcher a{
-      background:#1e293b;
-      color:#38bdf8;
-      border:1px solid #334155;
-      padding:10px 18px;
-      border-radius:8px;
-      text-decoration:none;
-      font-weight:bold;
-    }
-
-    .language-switcher a:hover{
-      background:#334155;
-    }
-
-    /* NAVEGACIÓN */
-
-    .navigation{
-      display:flex;
-      justify-content:space-between;
-      margin-top:30px;
-      flex-wrap:wrap;
-      gap:10px;
-    }
-
-    .nav-btn{
-      background:#38bdf8;
-      color:#000;
-      padding:12px 20px;
-      border-radius:8px;
-      text-decoration:none;
-      font-weight:bold;
-      transition:0.3s;
-    }
-
-    .nav-btn:hover{
-      background:#0ea5e9;
-    }
+    /* FOOTER */
 
     footer {
       text-align: center;
@@ -155,20 +216,14 @@
         padding: 16px;
       }
 
-      .btn,
-      .nav-btn {
+      .btn {
         width:100%;
         text-align:center;
         box-sizing:border-box;
       }
 
-      .contract-button {
-        position: static;
-        padding: 15px;
-      }
-
-      .navigation{
-        flex-direction:column;
+      .top-bar{
+        flex-direction:row;
       }
 
     }
@@ -178,9 +233,41 @@
 
 <body>
 
-  <!-- BOTÓN CONTRATO -->
+  <!-- BARRA SUPERIOR -->
 
-  
+  <div class="top-bar">
+
+    <!-- ICONO -->
+
+    <div class="menu-icon" onclick="toggleMenu()">
+
+      ☰
+
+    </div>
+
+    <!-- BOTONES IDIOMA -->
+
+    <div class="language-switcher">
+
+      <a href="index.html">Español</a>
+
+      <a href="indexingles.html">English</a>
+
+    </div>
+
+  </div>
+
+  <!-- MENÚ LATERAL -->
+
+  <div id="side-menu" class="side-menu">
+
+    <a href="indexingles.html">Home</a>
+
+    <a href="contratoingles.html">Contract</a>
+
+    <a href="reportedemoingles.html">Demo Report</a>
+
+  </div>
 
   <!-- HEADER -->
 
@@ -189,20 +276,10 @@
     <h1>Web Security Audit</h1>
 
     <p>
-      Protect your site before it gets attacked
+     Protect your site before it gets attacked
     </p>
 
   </header>
-
-  <!-- BOTONES IDIOMA -->
-
-  <div class="language-switcher">
-
-    <a href="index.html">Español</a>
-
-    <a href="indexingles.html">English</a>
-
-  </div>
 
   <!-- CONTENIDO -->
 
@@ -214,13 +291,14 @@
 
       <p>
         I analyze your website to detect basic vulnerabilities that could compromise your business or your users.
+
       </p>
 
     </div>
 
     <div class="card">
 
-      <h2>Servicios</h2>
+      <h2>Services</h2>
 
       <ul>
         <li>Automated vulnerability scanning</li>
@@ -256,9 +334,6 @@
 
     <div class="card">
 
-     
-    <div class="card">
-
       <h2>Contact</h2>
 
       <p>Email: cibersotvella@outlook.com</p>
@@ -273,26 +348,6 @@
 
     </div>
 
-    <!-- NAVEGACIÓN -->
-
-    <div class="navigation">
-
-      <a class="nav-btn"
-         href="contratoingles.html">
-
-         Contract
-
-      </a>
-
-      <a class="nav-btn"
-         href="reportedemoingles.html">
-
-         Report
-
-      </a>
-
-    </div>
-
   </div>
 
   <!-- FOOTER -->
@@ -302,6 +357,41 @@
     <p>© 2026 Basic web security</p>
 
   </footer>
+
+  <!-- SCRIPT -->
+<script>
+
+const sideMenu = document.getElementById("side-menu");
+
+function toggleMenu(){
+
+  sideMenu.classList.toggle("active");
+
+}
+
+/* CERRAR MENÚ AL HACER CLICK FUERA */
+
+document.addEventListener("click", function(event){
+
+  const menuIcon = document.querySelector(".menu-icon");
+
+  const clickedInsideMenu = sideMenu.contains(event.target);
+
+  const clickedMenuIcon = menuIcon.contains(event.target);
+
+  if(
+      !clickedInsideMenu &&
+      !clickedMenuIcon
+    ){
+
+      sideMenu.classList.remove("active");
+
+  }
+
+});
+
+</script>
+ 
 
 </body>
 

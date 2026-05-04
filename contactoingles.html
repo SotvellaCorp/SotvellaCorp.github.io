@@ -1,1 +1,123 @@
 
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contacto</title>
+
+<style>
+
+body{
+    font-family:Arial,sans-serif;
+    margin:0;
+    background:#0f172a;
+    color:#e2e8f0;
+}
+
+.container{
+    max-width:600px;
+    margin:auto;
+    padding:30px;
+}
+
+.card{
+    background:#1e293b;
+    padding:25px;
+    border-radius:12px;
+}
+
+h1{
+    text-align:center;
+    color:#38bdf8;
+}
+
+/* INPUTS */
+
+input, textarea{
+    width:100%;
+    padding:12px;
+    margin-top:10px;
+    margin-bottom:15px;
+    border:none;
+    border-radius:8px;
+    background:#020617;
+    color:#fff;
+}
+
+textarea{
+    height:120px;
+    resize:none;
+}
+
+/* BOTÓN ENVIAR */
+
+button{
+    width:100%;
+    padding:12px;
+    background:#22c55e;
+    border:none;
+    border-radius:8px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#16a34a;
+}
+
+/* BOTÓN VOLVER */
+
+.back-btn{
+    display:block;
+    text-align:center;
+    margin-top:15px;
+    padding:10px;
+    background:#38bdf8;
+    color:#000;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.back-btn:hover{
+    background:#0ea5e9;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="card">
+
+<h1>Contact</h1>
+
+<form action="https://formspree.io/f/mojrdjkd" method="POST">
+
+<input type="text" name="nombre" placeholder="Your name" required>
+
+<input type="email" name="email" placeholder="Your email" required>
+
+<textarea name="mensaje" placeholder="Write your messege..." required></textarea>
+
+<button type="submit">
+Send messege
+</button>
+
+</form>
+
+<a href="indexingles.html" class="back-btn">
+Back to hom
+</a>
+
+</div>
+
+</div>
+
+</body>
+</html>

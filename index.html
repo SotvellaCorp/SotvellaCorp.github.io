@@ -235,6 +235,28 @@
     border-radius:8px;
     margin-top:10px;
 }
+    /* BOTÓN CERRAR */
+
+.close-btn{
+    position:absolute;
+    top:15px;
+    right:15px;
+
+    font-size:22px;
+    color:#38bdf8;
+
+    cursor:pointer;
+
+    background:#1e293b;
+    padding:5px 10px;
+    border-radius:6px;
+
+    transition:0.3s;
+}
+
+.close-btn:hover{
+    background:#334155;
+}
   </style>
 </head>
 
@@ -267,6 +289,8 @@
   <!-- MENÚ LATERAL -->
 
   <div id="side-menu" class="side-menu">
+
+   <div class="close-btn" onclick="closeMenu()">✖</div>  
 
     <a href="index.html">Inicio</a>
 
@@ -414,6 +438,12 @@ function toggleMenu(){
 }
 
 /* CERRAR MENÚ AL HACER CLICK FUERA */
+  function closeMenu(){
+    document
+      .getElementById("side-menu")
+      .classList
+      .remove("active");
+}
 
 document.addEventListener("click", function(event){
 
